@@ -5,6 +5,8 @@ import Login from "./Pages/Login";
 import ChatRoom from "./Pages/ChatRoom";
 import Navbar from "./Components/Navbar";
 import Landing from "./Pages/Landing";
+import "./App.css";
+
 
 const App = () => {
   return (
