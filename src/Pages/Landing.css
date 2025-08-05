@@ -1,0 +1,36 @@
+.landing-container {
+  background-color: #e0f7ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.landing-container h2 {
+  color: #0077b6;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.landing-button {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.landing-button:hover {
+  background-color: #0077b6;
+}
