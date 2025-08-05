@@ -1,36 +1,51 @@
 .landing-container {
-  background-color: #e0f7ff;
-  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.landing-container h2 {
-  color: #0077b6;
-  font-size: 2.5rem;
+.landing-card {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+.landing-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.landing-card p {
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
 .button-group {
   display: flex;
+  justify-content: space-around;
   gap: 1rem;
 }
 
-.landing-button {
-  background-color: #00b4d8;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
+.button-group button {
+  padding: 0.7rem 1.5rem;
   font-size: 1rem;
+  background-color: #00c6ff;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  color: white;
+  transition: 0.3s ease;
 }
 
-.landing-button:hover {
-  background-color: #0077b6;
+.button-group button:hover {
+  background-color: #007acc;
 }

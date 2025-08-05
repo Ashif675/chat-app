@@ -1,32 +1,52 @@
 .navbar {
-  background-color: #28a745;
+  background-color: #1e1e2f;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1 {
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0;
 }
 
-.navbar ul {
+.navbar-links {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin: 0;
 }
 
-.navbar ul li {
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: #333;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.navbar ul li:hover {
-  color: #d4fcd4;
+.logout-button:hover {
+  background-color: #c0392b;
 }

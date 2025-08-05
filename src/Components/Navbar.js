@@ -1,17 +1,60 @@
-// src/components/Navbar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import { getAuth, signOut } from "firebase/auth";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+  const navigate = useNavigate();
+  const auth = getAuth();
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.error("Logout Error:", error);
+      });
+  };
+
   return (
     <nav className="navbar">
-      <h1>Chat App</h1>
-      <div>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/chat">Chat</Link>
+      <div className="navbar-logo">
+        <Link to="/">Chat App</Link>
       </div>
+
+      <ul className="navbar-links">
+        <li>
+          <Link to="/">Home</Link> {/* Goes to Landing Page */}
+        </li>
+
+        {!user && (
+          <>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>
+          </>
+        )}
+
+        {user && (
+          <>
+            <li>
+              <Link to="/form">Form</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <button onClick={handleLogout} className="logout-button">
+                Logout
+              </button>
+            </li>
+          </>
+        )}
+      </ul>
     </nav>
   );
 };
