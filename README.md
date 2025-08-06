@@ -1,3 +1,41 @@
+# 💬 Real-Time Chat App using React and Firebase
+
+A modern, real-time chat application built with React.js and Firebase. It allows users to sign up, log in, and send real-time messages in a global chat room. Clean and minimal UI ensures a great user experience.
+
+##  Features
+
+-  User Authentication (Signup/Login)
+-  Real-time chat functionality using Firebase Firestore
+-  Protected chat routes (only logged-in users can access chat)
+-  Responsive and clean UI
+-  Navigation with React Router
+
+## 🛠 Technologies Used
+
+- **Frontend**: React.js, React Router DOM
+- **Backend**: Firebase Authentication, Firestore
+- **Styling**: CSS
+- **Tools**: Visual Studio Code, Git, Firebase Console
+
+##  Folder Structure
+src/
+├── Components/
+│ └── Navbar.js
+│ └── Navbar.css
+├── Pages/
+│ ├── Landing.js
+│ ├── Login.js
+│ ├── Signup.js
+│ ├── ChatRoom.js
+│ └── ChatRoom.css
+├── firebase.js
+├── App.js
+└── App.css
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
